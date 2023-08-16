@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhvanilsinh - Computer Engineer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        /* The CSS code *{ margin: 0; } is used to set the margin (and padding if added) property to 0 for all elements on a web page */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: white;
+            color: aliceblue;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            /* justify-content: This property is used to define how the flex items are distributed along the "main axis (horizontal axis)" of the flex container. */
+            align-items: center;
+            /* align-items: This property is used to define how the flex items are aligned along the "cross axis (vertical axis)" of the flex container. */
+            height: 80px;
+            background-color: #BD8866;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        @media screen and (max-width: 800px) {
+            nav ul li {
+                margin: 0 10px;
+            }
+          
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: #573926;
+            font-size: 1.05rem;
+        }
+
+        .nav-container {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            /* Ensure it appears above other elements */
+        }
+
+        .nav-container.sticky {
+            position: fixed;
+            width: 100%;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            /* Optional: Add a shadow effect */
+            /* Add any other styles you want for the sticky header */
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 172px 0;
+        }
+
+        /* > By using this symbol we can only give mentioned width ti first div only and not the sub divs */
+        .firstSection>div {
+            width: 30%;
+
+        }
+
+        .leftSection {
+            font-family: 'Poppins', sans-serif;
+            color: black;
+            font-size: 2.5rem;
+        }
+
+        .leftSection .button {
+            padding: 25px;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background-color: bisque;
+            color: #0e0e1a;
+            border: 2px solid white;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .leftSection .btn:hover {
+            background-color: #C68642;
+            color: white;
+            font-size: 1.02rem;
+        }
+
+        .rightSection img {
+            width: 90%;
+            margin: 0 30px;
+
+        }
+
+        .ncolor {
+            color: #BD8866;
+        }
+
+        #element {
+            color: #BD8866;
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 141vw;
+            margin-bottom: 30px;
+        }
+
+        .text-gray {
+            margin: auto;
+            color: gray;
+        }
+        
+      
+
+        .secondSection h1 {
+            margin-top: 25px;
+            font-size: 1.9rem;
+            color: #BD8866;
+        }
+
+        @media screen and (max-width: 800px) {
+        /* margin: 15px; */
+          
+        }
+
+        .secondSection .box {
+            background: black;
+            width: 76vw;
+            height: 2px;
+            margin: 80px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            width: 1px;
+            height: 93px;
+            background-color: black;
+            margin: 0 115px;
+
+
+        }
+
+        main hr {
+            border: 0;
+            background: #573926;
+            height: 2px;
+            margin: 50px 84px;
+        }
+
+        @media screen and (max-width: 800px) {
+            main hr {
+                margin: 90px 90px;
+            } 
+        }
+
+        .image-top {
+            width: 50px;
+            position: relative;
+            top: -50px;
+            left: -23px;
+        }
+
+        .vertical-title {
+            position: relative;
+            color: #BD8866;
+            top: 55px;
+            width: 150px;
+            font-size: 15px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 65px;
+            color: black;
+            width: 180px;
+            font-size: 10px;
+            text-align: justify;
+        }
+
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: -1400px;
+
+        }
+
+        .about-img {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .about-img img {
+            max-width: 100%;
+            max-height: 350px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 4.5rem;
+        }
+
+        .heading span {
+            color: #BD8866;
+        }
+
+        .about-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .about-content h2 {
+            font-size: 3rem;
+            text-align: left;
+            line-height: 1.2;
+            color: black;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            color: #573926;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .about-content p {
+            width: 80%;
+            font-size: 20px;
+            margin: 2rem 0 3rem;
+            color: black;
+            font-family: 'Poppins', sans-serif;
+            text-align: justify;
+
+        }
+        
+        @media screen and (max-width: 800px) {
+
+            .about-content {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                margin-top: -600px;
+            }
+            .about-content h2 {
+                align-items: center;
+                font-size: 50px;
+            }
+            .about-content h3 {
+                align-items: center;
+                font-size: 30px;
+            }
+            .about-content p {
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+            }
+        }
+        .contact h2 {
+            font-size: 2rem;
+            margin-top: 200px;
+            margin-bottom: 3rem;
+            color: #BD8866;
+        }
+
+        .contact form {
+            max-width: 70rem;
+            margin: 1rem auto;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact form .input-box {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contact form .input-box input,
+        .contact form textarea {
+            width: 95%;
+            padding: 1.5rem;
+            font-size: 1rem;
+            color: black;
+            border-radius: .8rem;
+            margin: .7rem 0;
+            box-shadow: 0 4px 8px rgba(111, 111, 111, 0.4)
+        }
+
+        .contact form .input-box input {
+            width: 40%;
+        }
+
+        .contact form textarea {
+            resize: none;
+        }
+
+        .contact form .btn {
+            padding: 12px;
+            background-color: bisque;
+            color: #0e0e1a;
+            border: 2px solid bisque;
+            border-radius: 10px;
+            font-size: 15px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(111, 111, 111, 0.4)
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .contact {
+                align-items: center;
+            }
+            
+            .contact form .input-box , .contact  {
+             display: flex;
+             flex-wrap: wrap;
+             flex-direction: column;
+             align-items: center;
+             justify-content: space-between;
+        }
+
+        .contact form textarea {
+            width: 70%;
+        }
+
+          
+        }
+
+        .contact form .btn:hover {
+            background-color: #C68642;
+            color: white;
+            font-size: 1.04rem;
+        }
+
+        .footer-dark {
+            padding: 40px 0;
+            color: #f0f9ff;
+            background-color: #282d32;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            position: absolute;
+            width: 100%;
+        }
+
+        .footer-dark .container {
+            width: 100%;
+            max-width: 1200px;
+            /* Adjust as needed */
+        }
+
+        .footer-dark .col-sm-4 {
+            flex-basis: calc(40% - 40px);
+            margin: 25px 40px;
+            padding: 10px;
+            text-align: center;
+            /* Divide equally and subtract spacing */
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .footer-dark {
+                padding: 10px 0;
+                display: flex;
+                flex-direction: column;
+                width: 140%;
+            }
+            .footer-dark .col-sm-4 {
+                display: flex;
+                flex-direction: column;
+                margin-left: 10px;
+            }
+            
+          
+            .footer-dark .row {
+                display:flex;
+                flex-direction: column;
+
+             }
+        }
+        .footer-dark .col-sm-6 {
+                width: 65%;
+                font-size: 14px;
+                display: flex;
+                flex-direction: column;
+            }
+
+        @media screen and (max-width: 800px) {
+            .footer-dark .col-sm-6 {
+            justify-content: center;
+            align-items: center;
+            margin-top: -15px;
+            margin: 5px 50px;
+        }
+          
+        }
+
+        .footer-dark h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .footer-dark ul {
+            padding: 0;
+            list-style: none;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .footer-dark ul a {
+            color: inherit;
+            text-decoration: none;
+            opacity: 0.6;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .footer-dark ul a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width:767px) {
+            .footer-dark .item:not(.social) {
+                text-align: center;
+                padding-bottom: 20px;
+            }
+        }
+
+        .footer-dark .item.text {
+            margin-bottom: 36px;
+        }
+
+        @media (max-width:767px) {
+            .footer-dark .item.text {
+                margin-bottom: 0;
+            }
+        }
+
+        .footer-dark .item.text p {
+            opacity: 0.6;
+            margin-bottom: 0;
+        }
+
+        .col.item.social {
+            display: flex;
+            flex-direction: column;
+            padding-left: 50px;
+            margin: 5px 10px;
+        }
+
+        .col.item.social img {
+            width: 25px;
+            height: auto;
+            transition: transform 0.2s;
+        }
+
+        @media screen and (max-width: 800px) {
+            .col.item.social {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .col.item.social img {
+                padding: 20px 15px;
+            }
+          
+        }
+
+        .col.item.social a:hover img {
+            transform: scale(1.2);
+        }
+
+        .footer-dark .copyright {
+            text-align: center;
+            padding-top: 15px;
+            opacity: 0.3;
+            font-size: 13px;
+            margin-bottom: -30px;
+            flex-basis: 100%;
+        }
+
+        .footer-dark .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+        }
+
+   
+
+            @media screen and (max-width: 800px) {
+            .firstSection {
+                flex-direction: column-reverse;
+            }
+
+            .box {
+                flex-direction: column;
+            }
+            .secondSection .vertical {
+                height: unset;
+            }
+            .vertical-title {
+                left: 30px;
+            }
+
+            .vertical-desc {
+                left: 30px;
+            }
+            .secondSection .box {
+                width: 50vw;
+            }
+            @media screen and (max-width: 800px) {
+            .text-gray {
+            margin: 0px;
+        }
+          
+        }
+            
+            nav {
+                flex-direction: column;
+                font-size: 12px;
+                padding: 5px 5px;
+            }
+            .leftSection {
+                width: 100% !important ;
+                font-size: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;            
+            }
+            .rightSection {
+                width: 450px !important;
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightSection img {
+                 width: 65vw;
+                 margin-bottom: 75px;
+                 margin-top: -80px;
+            }
+           .secondSection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 141vh;
+            margin: -10px 10px;
+           }
+
+           .image-top {
+            top: 130px;
+           } 
+
+           .about {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-top: 1400px;
+           }
+
+           body {
+            max-width: 100%;
+            min-width: fit-content;
+            height: unset;
+           }
+        } 
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <nav>
+                <div class="left">Er.Dhvanilsinh</div>
+                <div class="right">
+                    <ul>
+                        <a class="nav-link" href="#home">
+                            <li>Home
+                        </a></li>
+                        <a class="nav-link" href="#about">
+                            <li>About
+                        </a></li>
+                        <a class="nav-link" href="#work-exp">
+                            <li>Work Experience
+                        </a></li>
+                        <a class="nav-link" href="#contact">
+                            <li>Contact Me
+                        </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="firstSection" id="home">
+            <div class="leftSection">
+                <div>Hello, I'm <span class="ncolor">Dhvanilsinh</span></div>
+                <div>A Computer Engineer </div>
+                <span id="element"></span>
+
+                <div class="buttons">
+                    <a href="https://drive.google.com/file/d/1qKW9S324QYu0Vwu7w-l9Cdr6ZhzVfmIf/view?usp=sharing"
+                        download><button class="btn">Download Resume</button></a>
+                    <a href="https://www.linkedin.com/in/dhvanilsinh-vaghela-8130b523a"><button class="btn">LinkedIn
+                            Profile</button></a>
+                </div>
+
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection" id="work-exp">
+            <span class="text-gray">What I have done so far,</span>
+            <h1>Work Experience</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="dv.png" alt="">
+                    <div class="vertical-title">
+                        PlanBrainer - AI Floor Plan Generator (FEB 2023 - MAY 2023)
+                    </div>
+                    <div class="vertical-desc">
+                        Built a web application based on AI. The Purpose of the project is to generate automatic
+                        building floor plans by using machine learning and neural networks. Technology used – HTML, CSS,
+                        ReactJS, Flask. Algorithms used – Convolution Neural Network (CNN) and Generative adversarial
+                        Network (GAN)
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="dv.png" alt="">
+                    <div class="vertical-title">
+                        Data Science with Python and PowerBI (Aug 2022 - Sep 2022)
+                    </div>
+                    <div class="vertical-desc">
+                        Analyzed data using python at Vnurture Technologies - Performed some simple statistical
+                        analysis, created meaningful data visualization and predicted future trends from data. Gained
+                        insights of the PowerBI tool.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="dv.png" alt="">
+                    <div class="vertical-title">
+                        E-COMMERCE WEBSITE (Jun 2022 - July 2022)
+                    </div>
+                    <div class="vertical-desc">
+                        Built an online shopping website that allows people to buy and sell physical goods over the
+                        internet, using stacks like React JS for the front end and Node JS for the back end at TATVA
+                        SOFT
+
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="dv.png" alt="">
+                    <div class="vertical-title">
+                        Modern TEST: competitive exam practice app (April 2022)
+                    </div>
+                    <div class="vertical-desc">
+                        Developed a web app for a competitive exam preparation, featuring MCQ based practice test and
+                        real time scoring using technologies like React JS, Node JS, Express JS and Mongo DB
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="dv.png" alt="">
+                    <div class="vertical-title">
+                        Web Design and Responsive Website Making (Aug 2021)
+                    </div>
+                    <div class="vertical-desc">
+                        Attended Certified Workshops by Tops Technologies on Webdesign,Graphic Design and Responsive and
+                        stunning website making and built basic gym website.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="Me.png" alt="">
+            </div>
+
+            <div class="about-content">
+                <h2 class="heading">About <span>Me</span></h2>
+                <h3>A Tech Enthusiast</h3>
+                <p>My passion for understanding how things work, coupled with my rapid learning curve, enables me to
+                    adapt
+                    seamlessly to new technologies and methodologies, ensuring efficient and effective problem-solving.
+                    Furthermore, I bring a meticulous and organized approach to my work, believing in the importance of
+                    strategic
+                    planning for successful outcomes.
+                </p>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 class="heading">
+                Contact <span>Me</span>
+            </h2>
+            <form action=" # ">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email Address">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Mobile Number">
+                    <input type="text" placeholder="Email Subject">
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+        </section>
+    </main>
+
+
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3>Sections</h3>
+                        <ul>
+                            <li><a class="nav-link" href="#work-exp">Work Experience</a></li>
+                            <li><a class="nav-link" href="#about">About</a></li>
+                            <li><a class="nav-link" href="#contact">Contact Me</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a
+                                    href="https://drive.google.com/file/d/1qKW9S324QYu0Vwu7w-l9Cdr6ZhzVfmIf/view?usp=sharing">Resume</a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/in/dhvanilsinh-vaghela-8130b523a">Linked In</a></li>
+                            <li><a
+                                    href="https://drive.google.com/drive/folders/1-4BaMilNQthvMgBeEPrumrLEzWWgBx07?usp=sharing">Certificates</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3>"Quotes"</h3>
+                        <p>These are the lines which work very well for me and many others.</p>
+                            <p> 1) Eventually Everything Connects !!! </p>
+                            <p> 2) Everything Happens for a good cause ...</p>
+                        </p>
+                    </div>
+                    <div class="col item social">
+                            <a  class="nav-link" href="#home">
+                                <img src="home.png" alt="Home">
+                            </a>
+                            <a href="Mailto:dhvanilsinh2110@gmail.com">
+                                <img src="mail.png" alt="E-mai">
+                            </a>
+                            <a href="#">
+                                <img src="twt.png" alt="Twitter">
+                            </a>
+                            <a href="#">
+                                <img src="Insta.png" alt="Instagram">
+                            </a>                        
+                    </div>
+                </div>
+                <p class="copyright">Dhvanilsinh's Portfolio © 2023</p>
+                </div>
+        </footer>
+    </div>
+
+
+
+    <!-- typed.js is a javascript typing animation library-->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Web Designer', 'Graphic Designer', 'Video Editor'],
+            typeSpeed: 50,
+            loop: true,
+        });
+
+        // Get the navigation container element
+        const navContainer = document.querySelector(".nav-container");
+
+        // Function to add or remove the "sticky" class based on scroll position
+        function toggleStickyNav() {
+            if (window.scrollY > 0) {
+                navContainer.classList.add("sticky");
+            } else {
+                navContainer.classList.remove("sticky");
+            }
+        }
+
+        // Add an event listener for the "scroll" event
+        window.addEventListener("scroll", toggleStickyNav);
+
+        // Define a new easing function for smooth scrolling
+        function easeInOutQuad(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        function smoothScroll(target, duration, offset) {
+            const targetElement = document.querySelector(target);
+            const targetPosition = targetElement.getBoundingClientRect().top;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - offset;
+
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const scrollY = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, scrollY);
+
+                // Check if we have reached the target position
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animation);
+                } else {
+                    // Ensure the target element is scrolled into view
+                    const scrolledY = window.pageYOffset;
+                    if (scrolledY > targetPosition) {
+                        window.scrollTo(0, targetPosition - offset);
+                    }
+                }
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        // Smooth Scroll on Navigation Links
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = this.getAttribute('href');
+                const duration = 1000; // Set the duration of the scroll animation (in milliseconds)
+                const navbarHeight = document.querySelector('nav').offsetHeight;
+                smoothScroll(target, duration, navbarHeight);
+            });
+        });
+
+        // Smooth Scroll on Footer Links
+        const footerLinks = document.querySelectorAll('.footer-second .nav-link');
+
+        footerLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = this.getAttribute('href');
+                const duration = 1000; // Set the duration of the scroll animation (in milliseconds)
+                const navbarHeight = document.querySelector('nav').offsetHeight;
+
+                // Calculate the offset considering the navbar and sticky header (if it exists)
+                let offset = navbarHeight;
+                const stickyNavContainer = document.querySelector(".nav-container.sticky");
+                if (stickyNavContainer) {
+                    offset += stickyNavContainer.offsetHeight;
+                }
+
+                smoothScroll(target, duration, offset);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
